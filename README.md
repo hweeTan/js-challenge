@@ -6,3 +6,9 @@
 4. Run the preview `yarn preview`
 
 The project was made using Vite ssr-react template as a starting point.
+
+## Time taken to complete each task:
+
+- Problem1: ~10 minutes
+- Problem2: ~5 hours
+- Problem3: ~15 minutes
