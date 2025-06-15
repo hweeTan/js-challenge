@@ -1,0 +1,21 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.Main {
+  display: flex;
+  width: 600px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+@media (max-width: 1250px) {
+  .Main {
+    width: 100%;
+    flex-direction: column;
+  }
+}
