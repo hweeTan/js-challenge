@@ -36,6 +36,8 @@ app.use(express.json())
 
 // Serve HTML
 app.post('/get-rate', async (req, res) => {
+
+  
   try {
     const response = await fetch('https://interview.switcheo.com/prices.json')
     const data = await response.json()
@@ -54,10 +56,12 @@ app.post('/get-rate', async (req, res) => {
 
     await new Promise((resolve) => setTimeout(resolve, Math.random() * 1000))
 
+    const numberOfDecimal = convertToCurrency === 'USD' ? 2 : 6
+
     res
       .status(200)
       .set({ 'Content-Type': 'application/json' })
-      .send(((value * toRate) / currentRate).toFixed(2))
+      .send(((value * toRate) / currentRate).toFixed(numberOfDecimal))
   } catch (e) {
     console.log(e.stack)
     res.status(500).end(e.stack)
